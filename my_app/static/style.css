@@ -1,0 +1,69 @@
+body{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 60px;
+    background-color:floralwhite;
+}
+
+title{
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        }
+
+.form-edge{
+    border-radius: 25px;
+    width:790px;
+    margin: 0 auto;
+}
+
+h2,
+h4,
+h5,
+h6{
+    font-family:'Times New Roman';
+    color: #01767a;
+}
+
+h1,
+h3,
+h5{
+    font-family:'Times New Roman';
+    color: rgb(202, 148, 0);
+}
+
+input{
+    outline: none;
+}
+
+input[type=text],
+input[type=password],
+textarea{
+    font-family: 'Times New Roman';
+    color:rgb(35, 132, 136);
+    padding: 8px;
+    border-width: 10px;
+    width:350px;
+    background-color:white;
+}
+.button{
+    border: 2px solid #757575;
+    background-color: #15467a;
+    color:white;
+    padding: 9px;
+    font-size: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+}
+::placeholder{
+    font-weight: 300;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    }

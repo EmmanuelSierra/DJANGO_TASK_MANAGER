@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<footer>
+    <p> MY APP</p>
+</footer>
+<html>
+    <div class="container bg-light shadow-md p-5">
+
+        <head> 
+
+            <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
+
+            <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+        </head>
+
+        <body>
+            
+            <div>
+
+            {% block content %}
+
+            {% endblock %}
+
+            </div>
+
+        </body>
+    </div>
+<footer>
+    <p>&copy; 2024 EmmanuelSierra.com</p>
+</footer>
+</html>

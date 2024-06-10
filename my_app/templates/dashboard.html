@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container bg-light shadow-md p-5">
+        <h1>Welcome to the Dashboard {{user}} !</h1>
+        <hr>
+        <h4>CREATE TASK</h4>
+        <form class="button" method="POST" href="{% url 'dashboard' %}" autocompete="off">
+            {% csrf_token %}
+            {{ Taskform }}
+            <input type="submit" value="SUBMIT"/>
+        </form>
+        <hr> 
+
+            <tbody>
+                {% for task in tasks %}
+
+                <tr>
+                    <h3> {{task}} </h3>
+
+                    <td>Description: {{task.description}}</td>
+                    <br>
+                    <td>Task Created: {{task.created}}</td>
+                    <br>
+                    {% if task.completed == True %}
+                
+                        <td> Task completed: Yes </td>
+
+                    {% else %}
+
+                        <td>Task completed: No </td>
+                
+                    {% endif %}
+
+
+                    <a class="btn btn-outline-primary btn-sm" href="{% url 'update_tasks' task.id %}"> UPDATE </a>
+                    
+                    <br> 
+                
+                    <a class="button btn-primary btn-sm" href="{% url 'delete_tasks' task.id %}"> DELETE </a>
+                    <br> <br>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+    </div>
+    <hr>
+    <a class="btn btn-outline-primary btn-sm" href="{% url 'user_logout' %}"> LOGOUT APP </a>
+
+{% endblock %}

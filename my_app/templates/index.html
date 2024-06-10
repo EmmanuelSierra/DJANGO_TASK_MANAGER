@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <br>
+    <h2> THIS IS HOME PAGE </h2>
+    <h3>This is just a taste of what we have learned so far in this bootcamp</h3>
+    <h4> Hope you enjoy it!</h4>
+    <br> <br>
+    <a class="btn btn-outline-primary" type="button" href="{% url 'register' %}"> Create your account here </a>
+    <hr>
+    <a class="btn btn-outline-primary" type="button" href="{% url 'login' %}"> Login here </a>
+
+{% endblock %}

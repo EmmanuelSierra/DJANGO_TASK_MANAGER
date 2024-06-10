@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container bg-light shadow-md p-5">
+
+    <h1> Delete Task </h1>
+    <p>  Are you sure that you want to delete "{{task}}" ?  </p>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input class="btn btn-outline-primary btn-sm" type="submit" value="SUBMIT">
+    </form>
+    <br>
+    <a class="btn btn-primary" href="{% url 'dashboard' %}">DASHBOARD</a>
+</div>
+<hr>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>REGISTER FORM</h2>
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+            {{registerform.as_p}}
+            <br>
+            <button type="submit" class="button">Create Account </button>
+        </form>
+        <hr>
+        <h5>Already have an account?</h5>
+        <a class="btn btn-outline-primary" type="button" href="{% url 'login' %}"> Login here </a>
+        <br><br>
+        <a class="btn btn-outline-primary" type="button" href="{% url '' %}"> Go to Main Page </a>
+
+{% endblock %}

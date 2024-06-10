@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container bg-light shadow-md p-5">
+        <h1>UPDATE TASK</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ TaskForm }}
+            <input class="btn btn-outline-primary btn-sm" type="submit" value="SUBMIT">
+        </form>
+        <br>
+        <a class="btn btn-primary btn-sm" href="{% url 'dashboard' %}">DASHBOARD</a>
+    </div>
+    <hr>
+
+{% endblock %}
